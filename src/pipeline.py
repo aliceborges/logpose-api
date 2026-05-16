@@ -10,7 +10,7 @@ def baixar_dados(ticker: str, start_date: str, end_date: str) -> pd.DataFrame:
     """Baixa os dados históricos do Yahoo Finance."""
     print(f"Baixando dados para {ticker}...")
     df = yf.download(ticker, start=start_date, end=end_date)
-    return df[['Close']]  # Focamos apenas no preço de fechamento
+    return df[['Close']]
 
 
 def preparar_dados(df: pd.DataFrame, window_size: int = 60) -> Tuple[np.ndarray, np.ndarray, Any]:
