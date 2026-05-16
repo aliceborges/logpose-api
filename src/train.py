@@ -64,7 +64,7 @@ def treinar_modelo(ticker: str = 'DIS', start_date: str = '2018-01-01', end_date
     os.makedirs('models', exist_ok=True)
     model.save('models/modelo_lstm.keras')
     joblib.dump(scaler, 'models/scaler.pkl')
-    print("✅ Modelo e Scaler guardados com sucesso na pasta 'models/'.")
+    print("Modelo e Scaler guardados com sucesso na pasta 'models/'.")
 
 
 if __name__ == "__main__":
